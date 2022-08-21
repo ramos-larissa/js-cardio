@@ -3,16 +3,16 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-    return 'Let\'s Start'
-  }
-  
-  
+    return str.split('').reverse().join('');
+}
   
   // CHALLENGE 2: VALIDATE A PALINDROME
   // Return true if palindrome and false if not
   // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
   
-  function isPalindrome(str) {}
+  function isPalindrome(str) {
+    return str.split('').reverse().join('') === str;
+  }
   
   
   
@@ -20,16 +20,18 @@ function reverseString(str) {
   // Return an integer in reverse
   // ex. reverseInt(521) === 125
   
-  function reverseInt(int) {}
+  function reverseInt(int) {
+        return  parseInt(int.toString().split('').reverse().join(''));
+  }
   
   
   
   // CHALLENGE 4: CAPITALIZE LETTERS
   // Return a string with the first letter of every word capitalized
   // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-  function capitalizeLetters(str) {}
-  
-  
+  function capitalizeLetters(str) {
+    return str.split(' ').map(word=> word[0].toUpperCase() + word.slice(1)).join(' ');
+  }
   
   // CHALLENGE 5: MAX CHARACTER
   // Return the character that is most common in a string
